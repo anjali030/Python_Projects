@@ -10,12 +10,12 @@ from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 import getpass
 #multipurpose Internet mail extension
-ImageFileName="D:\\4.jpg"
+ImageFileName="C:\MSI\image.jpg"
 img_data=open(ImageFileName, 'rb').read()
 msg=MIMEMultipart()
-msg['FROM']='anjalimittal097@gmail.com'
+msg['FROM']='mittalanjali1997@gmail.com'
 password=getpass.getpass('Enter your password')
-msg['To']='akanshamaheshawari911@gmail.com'
+msg['To']='anjalimittal097@gmail.com'
 msg['Subject']='My Mail'
 body='''Image attachment text email succesfull.
 This program is written in python
@@ -31,5 +31,3 @@ s.login(msg['From'],password)
 s.sendmail(msg['From'],msg['To'],msg.as_string())
 s.quit()
 print('Email Sent Successfully')
-
-
